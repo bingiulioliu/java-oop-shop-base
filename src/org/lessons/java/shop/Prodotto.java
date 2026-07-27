@@ -11,23 +11,22 @@ public class Prodotto {
     private double prezzo;
     private int iva;
 
-    // Costruttori (es precedente)
-    // public Prodotto(String nome, String descrizione, float prezzo, int iva){
-    //     // Inizializzazione attributi
-    //     this.nome = nome;
-    //     this.descrizione = descrizione;
-    //     this.prezzo = prezzo;
-    //     this.iva = iva;
-    // }
-
-    // public double getFullPrice(){
-    //     double fullPrice = this.prezzo * (1 +(this.iva / 100.0));
-    //     return Math.round(fullPrice * 100.0) / 100.0;
-    // }
+    // Costruttori
+    public Prodotto(String nome, String descrizione, float prezzo, int iva){
+    // Inizializzazione attributi
+    setName(nome);
+    setDescription(descrizione);
+    setPrice(prezzo);
+    setIva(iva);
+    }
 
     // public String concatCodeName(){
     //     return codice + "-" + nome;
     // }
+
+    public int getCode(){
+        return this.codice;
+    }
 
     public String getName(){
         return this.nome;
@@ -69,10 +68,15 @@ public class Prodotto {
     }
 
     public void setIva(int vat){
-        if (iva > 0){
+        if (vat > 0){
             this.iva = vat;
         } else {
             System.out.println("Inserire un'aliquota corretta");
         }
+    }
+
+    public double getFullPrice(){
+        double fullPrice = this.prezzo * (1 +(this.iva / 100.0));
+        return Math.round(fullPrice * 100.0) / 100.0;
     }
 }
