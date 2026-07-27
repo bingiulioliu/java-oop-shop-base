@@ -34,7 +34,7 @@ public class Prodotto {
     }
 
     public void setName(String name){
-        if (name.length() > 0){
+        if (name != null && name.trim().length() > 0){
             this.nome = name;
         } else {
             System.out.println("Inserire un nome");
@@ -45,7 +45,7 @@ public class Prodotto {
         return this.descrizione;
     }
     public void setDescription(String description){
-        if (description.length() > 0){
+        if (description != null && description.trim().length() > 0){
             this.descrizione = description;
         } else {
             System.out.println("Inserire una descrizione");
