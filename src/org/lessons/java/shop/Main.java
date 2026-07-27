@@ -14,5 +14,4 @@ public class Main {
     System.out.println("Costo: " + coltello.getFullPrice() + " euro");
     }
 
-
 }
