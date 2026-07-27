@@ -11,8 +11,8 @@ public class Prodotto {
     private double prezzo;
     private int iva;
 
-    // Costruttori
-    public Prodotto(String nome, String descrizione, float prezzo, int iva){
+    // Primo costruttore
+    public Prodotto(String nome, String descrizione, double prezzo, int iva){
     // Inizializzazione attributi
     setName(nome);
     setDescription(descrizione);
@@ -20,9 +20,10 @@ public class Prodotto {
     setIva(iva);
     }
 
-    // public String concatCodeName(){
-    //     return codice + "-" + nome;
-    // }
+    // Secondo costruttore con iva a 22 di default
+    public Prodotto(String nome, String descrizione, double prezzo){
+        this(nome, descrizione, prezzo, 22);
+    }
 
     public int getCode(){
         return this.codice;

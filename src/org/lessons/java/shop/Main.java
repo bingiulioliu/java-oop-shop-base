@@ -8,7 +8,7 @@ public class Main {
     System.out.println("Prodotto creato: " + maglietta.getName() + " codice: " + maglietta.getCode());
     System.out.println("Costo: " + maglietta.getFullPrice() + " euro");
 
-    Prodotto coltello = new Prodotto("Lama divina", "Taglia tutto", 1299.99f, 10);
+    Prodotto coltello = new Prodotto("Lama divina", "Taglia tutto", 1299.99f);
     
     System.out.println("Prodotto creato: " + coltello.getName() + " codice: " + coltello.getCode());
     System.out.println("Costo: " + coltello.getFullPrice() + " euro");
